@@ -39,3 +39,9 @@ docker-compose up
 ```bash
 curl http://localhost/njs
 ```
+
+## dev
+```bash
+#manual test pre-commit
+pre-commit run -a -v
+```

@@ -1,3 +1,5 @@
-function njsTest(r) {
-  r.return(200, "The njs module was loaded\n");
+export default { myfunction }
+
+function myfunction(r) {
+  r.return(200, "my fuction was called\n");
 }
