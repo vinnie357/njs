@@ -1,0 +1,7 @@
+#nginx
+nginx-repo.crt
+nginx-repo.key
+#ssl
+server.crt
+server.csr
+server.key
