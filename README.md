@@ -21,16 +21,36 @@ openssl x509 -req -sha256 -days 365 -in server.csr -signkey server.key -out serv
 ```
 
 ### set function name in docker-compose.yml
+  http://nginx.org/en/docs/http/ngx_http_js_module.html#js_include
 
   NJS = the name of your function in main.js
 
+  the names by default are derived from the filename of your .js included and the name of your exported function.
+
+  test.js
+  ```js
+  export default { njs }
+  function njs(r) {
+    r.return(200, "The njs module was loaded\n");
+  }
+  ```
+  test.njs
+
   ```yaml
   environment:
-    - NJS=njs.test
+    - NJS=test.njs
   ```
 ## running
 
 ```bash
+docker-compose up
+```
+
+## re-running
+```bash
+# rerun the templates with envsubstr
+docker-compose build
+# start again
 docker-compose up
 ```
 
