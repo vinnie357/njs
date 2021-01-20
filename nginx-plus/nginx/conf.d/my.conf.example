@@ -1,8 +1,8 @@
 # njs
-js_include /etc/nginx/conf.d/js/test.js;
+js_import /etc/nginx/conf.d/js/main.js;
 # server
 server {
-    listen 80 default_server;
+    listen 443 default_server;
     location /njs {
       js_content ${NJS};
     }

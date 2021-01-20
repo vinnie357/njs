@@ -1,5 +1,5 @@
-export default {njs}
+export default { njs }
 
-function test(r) {
+function njs(r) {
   r.return(200, "The njs module was loaded\n");
 }

@@ -1,5 +1,5 @@
-export default { myfunction }
+export default { myFunction }
 
-function myfunction(r) {
-  r.return(200, "my fuction was called\n");
+function myFunction(r) {
+  r.return(200, "my function was called\n");
 }

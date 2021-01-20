@@ -26,7 +26,7 @@ openssl x509 -req -sha256 -days 365 -in server.csr -signkey server.key -out serv
 
   ```yaml
   environment:
-    - NJS=njsTest
+    - NJS=njs.test
   ```
 ## running
 
@@ -37,7 +37,11 @@ docker-compose up
 ## test
 
 ```bash
-curl http://localhost/njs
+# test module loaded
+curl http://localhost/test
+# test your function
+curl -v https://localhost/njs
+
 ```
 
 ## dev

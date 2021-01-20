@@ -5,3 +5,5 @@ nginx-repo.key
 server.crt
 server.csr
 server.key
+#config
+my.conf

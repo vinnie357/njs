@@ -81,7 +81,7 @@ RUN set -x \
 COPY docker-entrypoint.sh /
 COPY 20-envsubst-on-templates.sh /docker-entrypoint.d
 
-RUN chmod +x /docker-entrypoint.sh
+RUN chmod +x /docker-entrypoint.sh && chmod +x /docker-entrypoint.d/20-envsubst-on-templates.sh
 
 ENTRYPOINT ["/docker-entrypoint.sh"]
 

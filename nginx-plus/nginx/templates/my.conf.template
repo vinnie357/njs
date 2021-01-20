@@ -1,8 +1,11 @@
 # njs
-js_include /etc/nginx/conf.d/js/main.js;
+js_import /etc/nginx/conf.d/js/main.js;
 # server
 server {
-    listen 80 default_server;
+    listen       443 ssl;
+    server_name  localhost;
+    ssl_certificate     /etc/nginx/conf.d/certs/server.crt; # The certificate file
+    ssl_certificate_key /etc/nginx/conf.d/certs/server.key; # The private key file
     location /njs {
       js_content ${NJS};
     }
