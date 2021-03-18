@@ -57,6 +57,17 @@ openssl x509 -req -sha256 -days 365 -in server.csr -signkey server.key -out serv
   ```
 ## running
 
+
+### optional
+
+```bash
+# setup
+. init.sh && setup
+# test
+. init.sh && test
+```
+
+### manual
 ```bash
 docker-compose up
 ```
