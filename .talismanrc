@@ -1,3 +1,7 @@
 fileignoreconfig:
 - filename: nginx-plus/20-envsubst-on-templates.sh
   checksum: 0c88c19f1cb7754a7ebea14d2cc6a84c34625ed7ab0907b9d80a943ec5a8ad53
+- filename: README.md
+  checksum: 0f400122799c858494b3bbfe58b4d1b184363a281ad27def8bca2c1a97c9ce12
+- filename: .devcontainer/scripts/docker-debian.sh
+  checksum: 3109be3be53c3dad4a7cfcd0c07c87cd41ab26cc24e1fd4110fe69ecb955ae9a

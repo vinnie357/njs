@@ -7,6 +7,21 @@ https://nginx.org/en/docs/njs/reference.html
 
 copy your nginx-repo.crt and nginx-repo.key to nginx-plus/licenses/
 
+```bash
+## access from local vault
+
+## access secret from  google secretsmanager
+secretName="my-nginx-secrets"
+secrets=$(gcloud secrets versions access latest --secret="${secretName}")
+## cert
+cat << EOF > nginx-plus/licenses/nginx-repo.crt
+$(echo $secrets | jq -r .cert)
+EOF
+## key
+cat << EOF > nginx-plus/licenses/nginx-repo.key
+$(echo $secrets | jq -r .key)
+EOF
+```
 
 ### create a default server cert
 
